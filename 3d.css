@@ -1,0 +1,80 @@
+/*
+* @Author: Administrator
+* @Date:   2018-03-22 19:56:55
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-03-22 21:25:51
+*/
+*{
+	margin:0;
+	padding:0;
+	list-style: none;  
+}
+body{
+	background: pink;
+}
+.sanD{
+	width: 500px;
+	height: 500px;
+	background: red;
+	margin:100px auto; 
+	border:2px solid yellow;
+    perspective: 100px;
+}
+
+.sanD ul{
+	width: 200px;
+	height: 200px;
+	margin:150px; 
+	position: relative;
+	transform-style: preserve-3d;
+	transition: 5s;
+	/* perspective-origin: left top; */
+}
+.sanD ul li{
+	width: 200px;
+	height: 200px;
+	top: 0;
+	left: 0;
+	position: absolute;
+	opacity: 0.8;
+	transition: 5s;
+}
+.sanD:hover .left{
+	background: green;
+	box-shadow: 0 0 15px 5px #fff;
+	transform: translateX(-100px) rotateY(90deg);
+	
+}
+.sanD:hover .right{
+	background: skyblue;
+	box-shadow: 0 0 15px 5px #fff;
+	transform: translateX(100px) rotateY(90deg);
+	
+}
+.sanD:hover .back{
+	background: pink;
+	box-shadow: 0 0 15px 5px #fff;
+	transform: translateZ(100px);
+}
+.sanD:hover .front{
+	background: blue;
+	box-shadow: 0 0 15px 5px #fff;
+	transform: translateZ(-100px);
+	background: rgba(255, 250, 255, 0.2);
+	
+}
+.sanD:hover .top{
+	background: yellow;
+	box-shadow: 0 0 15px 5px #fff;
+	transform: translateY(-100px) rotateX(90deg);
+	
+}
+.sanD:hover .bottom{
+	background: yellow;
+	box-shadow: 0 0 15px 5px #fff;
+	transform: translateY(100px) rotateX(90deg);
+	
+}
+.sanD:hover ul{
+	transform: rotate3d(0, 1, 1, 180deg);
+}
